@@ -22,8 +22,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 |----------|----------|------------|         ------------------
 |Jump Box | Gateway  |  10.0.0.1   |             Linux            
 |Elk      |Elk Server   10.2.0.4/20.98.87.130 |  Linux                |Web 1    |Web Server   10.0.0.10                Linux                 
-|Web 2    |Web Server     10.0.0.9                 Linux                 |
-
+|Web 2    |Web Server   10.0.0.9                 Linux                 |
 Workstation |Access control| |Public IP|         Linux
 ### Access Policies
 The machines on the internal network are not exposed to the public Internet. 
@@ -36,7 +35,7 @@ A summary of the access policies in place can be found in the table below.
 | JumpBox  |No| The workstation’s public ip on port 22  |
 | Elk   | No|The workstation’s public ip on port 5601 
 | Web 1 | No|10.2.0.4 on port 22
-| Web 2 |      No  10.2.0.4 on port 22
+| Web 2 | No  10.2.0.4 on port 22
 | Load Balancer |No|The workstation’s public ip on port 80
 
 ### Elk Configuration
@@ -48,7 +47,7 @@ The playbook implements the following tasks:
 - It downloads and starts an elk container
 - It enables service docker while booted
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps.jpg)
+!(Images/docker_ps.jpg)
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 10.0.0.7
@@ -66,8 +65,5 @@ SSH into the control node and follow the steps below:
 - _Which file do you update to make Ansible run the playbook on a specific machine? /etc/filebeat/filebeat-config.yml
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?_ By editing the filebeat-config.yml file
 - _Which URL do you navigate to in order to check that the ELK server is running? http://[your.VM.IP]:5601/app/kibana
-
-
-
 
 
